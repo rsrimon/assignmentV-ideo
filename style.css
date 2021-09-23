@@ -1,0 +1,281 @@
+/* ======== Default Style CSS ======== */
+
+body,p,span{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6,a{
+    font-family: 'Rubik', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+ul{
+    list-style: none;
+}
+.header .container-fluid{
+    max-width: 1380px;
+}
+.bg-1{
+    background-color: #f9fafb;
+}
+
+/* ======== Header Section CSS ======== */
+
+ul.menu li a{
+    color: #111;
+    padding: 20px 15px;
+    font-weight: 600;
+    transition: .5s;
+}
+ul.menu li:hover > a{
+    color: #e73c3e;
+}
+.home{
+    color: #e73c3e !important;
+}
+
+/* ======== DropDown Menu Section CSS ======== */
+ul.menu li{
+    position: relative;
+}
+ul.menu li ul.drop-menu{
+    position: absolute;
+    left: 0;
+    top: 330%;
+    width: 200px;
+    padding-left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.1);
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s;
+}
+ul.menu li ul.drop-menu li a{
+    display: block;
+    padding: 10px 0;
+    margin-left: 20px;
+}
+ul.menu li ul.drop-menu li a:hover{
+    letter-spacing: 2px;
+}
+ul.menu li:hover ul.drop-menu{
+    visibility: visible;
+    opacity: 1;
+    top: 150%;
+}
+
+.header-search{
+    width: 35px;
+    font-size: 25px;
+    border-right: 2px solid #ddd;
+}
+.header-call-icon span{
+    color: #e73c3e;
+    font-size: 25px;
+    margin-left: 10px;
+}
+.header-call-info a{
+    color: #111;
+    font-weight: 600;
+}
+.btn-primary{
+    color: white;
+    background-color: #e73c3e !important;
+    border: none;
+    padding: 12px 35px;
+    position: relative;
+    z-index: 1;
+}
+.btn-primary::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #111;
+    border-radius: 5px;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-primary:hover::after{
+    width: 100%;
+}
+
+/* ======== Banner Section CSS ======== */
+
+.banner{
+    background-image: url(./Img/main-banner2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0;
+}
+.banner-text h5{
+    color: #e73c3e;
+}
+.banner-text h1{
+    font-size: 65px;
+}
+.socal-menu{
+    margin-top: 100px;
+}
+.socal-menu ul li a{
+    color: #111;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: .4s;
+}
+.socal-menu ul li a:hover{
+    color: #e73c3e;
+}
+.follow{
+    color: #111;
+    font-size: 20px;
+    position: relative;
+    margin-right: 45px;
+}
+.follow::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 5%;
+    top: 50%;
+    right: -50%;
+    background-color: #111;
+}
+
+/* ======== About Section CSS ======== */
+
+.about-image{
+    position: relative;
+}
+.about-image-text{
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    background: url(./Img/shape.png);
+    height: 200px;
+    width: 200px;
+    background-size: contain;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-image-text h1{
+    color: #e73c3e;
+}
+.about-image-text h6{
+    font-weight: 600
+}
+.about-text h6{
+    color: #e73c3e;
+}
+.about-text ul li span{
+    display: inline-block;
+    margin-right: 10px;
+    color: #e73c3e;
+    margin: 7px 0;
+}
+
+/* ======== Choose Section CSS ======== */
+
+.choose-text h6{
+    color: #e73c3e;
+}
+.choose-img{
+    position: relative;
+}
+.play-btn {
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 250px;
+    bottom: 55px;
+    color: #e73c3e;
+    transition: .4s;
+}
+.play-btn::after{
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #e73c3f6e;
+    border-radius: 50%;
+    animation: plabtn 1.6s ease-in-out infinite;
+}
+@keyframes plabtn{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(1.5);
+        opacity: .7;
+    }
+    100%{
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+.play-btn:hover{
+    background-color: #e73c3e;
+    color: #fff;
+}
+.choose-item{
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+}
+.choose-item:hover{
+    transform: translateY(-15px);
+}
+.choose-item::before {
+    content: "";
+    position: absolute;
+    top: -128px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 90%;
+    height: 70%;
+    background-color: #fdebeb;
+    border-radius: 50%;
+}
+.choose-item .choose-icon{
+    position: relative;
+    z-index: 1;
+}
+.choose-item .choose-icon i{
+    color: #e73c3e;
+    width: 90px;
+    height: 90px;
+    background-color: #fff;
+    line-height: 90px;
+    border-radius: 50%;
+    font-size: 32px;
+    margin: auto;
+    transition: .4s;
+}
+.mtop{
+    margin-top: -30px;
+}
+.choose-item:hover .choose-icon i{
+    color: #fff;
+    background-color: #e73c3e;
+}
